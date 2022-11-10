@@ -1,10 +1,22 @@
 import React from 'react'
+import { Routes, Route } from "react-router-dom";
+
+import Home from "./components/Home"
+import Login from './components/Login';
 
 const App = () => {
   return (
-    <h1 className="text-3x1 font-bold underline">
-        AIGeneratedArt
-    </h1>
+    <Routes>
+      <Route 
+        path="login"
+        element={< Login />}
+      />
+
+      <Route 
+        path="/*"
+        element={< Home />}
+      />
+    </Routes>
   )
 }
 
